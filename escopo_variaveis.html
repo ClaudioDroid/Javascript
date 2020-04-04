@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Escopo</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+		/*
+		As funções usam variáveis globais, mas o escopo global não reconhece as variáveis das funções.
+		Os blocos(Ex.: If, Switch...) usam as variáveis globais, e os escopos globais reconhecem as variáveis dos blocos. 
+		*/
+
+		var serie = (" Sherlock "); // Var global
+
+		if (true){
+			serie2 = (" BBTheory "); //Var de bloco
+			document.write(serie); 
+			document.write(serie2);
+		}
+
+		function chamaSerie(){
+			var serie3 = (" Vikings ") // Var de função (exclusiva da função). Se essa variável for criada sem utilizar VAR então será considerada uma variável global;
+			document.write("<br />");
+			document.write(serie);
+			document.write(serie2);
+			document.write(serie3);
+		}
+		chamaSerie();
+
+		document.write("<br />");
+		document.write(serie,serie2,serie3);		
+		
+	</script>
+
+</head>
+
+<body>
+
+	<script>
+        
+        
+        
+	</script>
+
+</body>
+</html>
