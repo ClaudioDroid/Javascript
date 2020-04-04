@@ -5,23 +5,52 @@
 	<meta charset="utf-8">
 
 	<script type="text/javascript">
+	
+		var name = prompt("Escreva o seu nome: ");
+		var high = prompt("Escreva a sua altura em centímetros: ");
+		var weight = prompt("Escreva o seu peso: ");
+		console.log(high, weight);
+		parseFloat(weight);
+		parseFloat(high);
+		console.log(high, weight);
+		var highmt = high/100;
+		var m = weight/(highmt*highmt);
+		var classificacao;
 		
-		var idade = prompt('Digite sua idade:');
+		console.log(m);
 
-		if( idade >= 0 && idade < 15 ){
-			document.write('Criança');
-		}else{
-			if(idade > 15 && idade < 30){
-				document.write('Jovem');
-			}else{
-				if(idade >= 30 && idade < 60){
-					document.write('Adulto');
-				}else{
-					document.write('Idoso')
-				}
-			}
+		switch (true){
+			case (m < 16):
+				classificacao = "Baixo peso muito grave"
+				break;
+			case (m >= 16 && m <= 16.99):
+				classificacao = "Baixo peso grave"
+				break;
+			case (m >= 17 && m <=18.49):
+				classificacao = "Baixo peso"				
+				break;
+			case (m >= 18.50 && m <=24.99):
+				classificacao = "Peso normal"
+				break;
+			case (m >= 25 && m <= 29.99):
+				classificacao = "Sobrepeso"			
+				break;
+			case (m >= 30 && m <= 34.99):
+				classificacao = "Obesidade grau I"
+				break;
+			case (m >= 35 && m <= 39.99):
+				classificacao = "Obesidade grau II"
+				break;
+			case (m > 40):
+				classificacao = "Obesidade grau III"
+				break;
+			default:
+				classificacao = "Por favor, insira valores corretos!"
 		}
 
+		document.write(" <br />" + name + (" possui índice de massa corporal igual a ") + m + (", sendo classificado como: ") + classificacao );
+
+	
 	</script>
 
 </head>
@@ -29,11 +58,10 @@
 <body>
 
 	<script>
-		
+        
+        
+        
 	</script>
-
-	
-
 
 </body>
 </html>
