@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Função anônima</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            if (true){
+                callbackSucesso("Funções callback em JS, lorem ipsum dolor sit amet";)
+            }else{
+                callbackErro("Erro ao recuperar os dados.")
+            }
+        }
+
+        var callbackSucesso = function(titulo, descricao){
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr />')
+            document.write('<p>' + descricao + '</p>')
+        }
+        var callbackErro = function(){
+            document.write('<p><b>Erro:</b>' + erro + '</p>')
+        }
+        
+        exibirArtigo(1, callbackSucesso, callbackErro)
+		
+	</script>
+
+</head>
+
+<body>
+
+	<script>
+        
+        
+        
+	</script>
+
+</body>
+</html>
