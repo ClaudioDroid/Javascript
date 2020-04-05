@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+        // Acouding to OS date.
+       var d = new Date();
+       var m = new Date(); //getMonth uses months from 0 to 11, so we must use the "+1" to get the correct month.
+       var y = new Date ();
+       document.write( d.getDate() + "/" + (m.getMonth()+1) + "/" + y.getFullYear() );
+
+        
+        document.write("<br /> <hr> <br />") /* ----------------------------  */
+        
+        // Add / remove days
+        var mydate = new Date()
+        document.write(mydate.toString()) //Dia de hoje
+        mydate.setDate(mydate.getDate() +1) //Um dia a mais que hoje
+        document.write("<hr>")
+        document.write(mydate);
+
+        // Add / remove months
+        var mydate = new Date()
+        document.write(mydate.toString()) 
+        mydate.setDate(mydate.getMonth() +7) 
+        document.write("<hr>")
+        document.write(mydate);
+
+        // Add / remove years
+        var mydate = new Date()
+        document.write(mydate.toString()) 
+        mydate.setDate(mydate.getFullYear() +2) 
+        document.write("<hr>")
+        document.write(mydate);
+
+        document.write("<br /> <hr> <br />") /* ----------------------------  */
+        
+        // Set specific date
+        var data1 = new Date(2017, 5 ,22)
+        var data2 = new Date(2024, 2 ,12)
+        document.write( data1.toString() )
+
+	</script>
+
+</head>
+
+<body>
+
+	<script>
+        
+        
+        
+	</script>
+
+</body>
+</html>
