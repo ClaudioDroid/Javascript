@@ -4,30 +4,18 @@
 	<title>Javascript</title>
 	<meta charset="utf-8">
 
+	<style>
+		div#area{
+			background: rgb(42, 139, 42);
+			color: wheat;
+			height: 120px;
+			text-align: center;
+		}
+		
+	</style>
+
 	<script type="text/javascript">
 	
-	var num1 = prompt("Insira um número: ");
-	var op = prompt("Insira a operação de 'soma' ou 'subtração': ");
-	var num2 = prompt("Insira outro número: ");
-
-	function calculaNumeros(num, op, num2){
-		if( op == "soma" ){
-			var result = ( parseInt(num1) + parseInt(num2) );
-		}else{
-			if( op == "subtração" ){
-				var result = ( parseInt(num1) - parseInt(num2) );
-			}else{
-				var result = ("Insira os valores conforme solicitado! ");
-			}
-		}
-		return result;
-	}
-
-	var result = calculaNumeros(num1, op, num2);
-	console.log(result);
-
-	document.write("O resultado é: " + calculaNumeros(num1, op, num2) );
-
 
 	
 	</script>
@@ -36,10 +24,30 @@
 
 <body>
 
+		<div id="area"  onmouseout="mouseout()">
+			intereja...
+		</div>
+
+
 	<script>
-        
-        
-        
+
+		
+		var ok;
+        var x;
+
+		ok.addEventListner('click', click1)
+		
+
+		function mouseout(){
+			var x = document.getElementById("area");
+			x.innerText = "intereja";
+		}
+
+		function click1(){
+			var ok = document.getElementById('area');
+			ok.innerText = "clicou"
+		}
+
 	</script>
 
 </body>
