@@ -5,34 +5,97 @@
 	<meta charset="utf-8">
 
 	<style>
-		div#area{
-			background: rgb(42, 139, 42);
-			color: wheat;
-			height: 120px;
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		input{
+			margin-bottom: 20px;
+		}
+
+		div#container{
+			width: 100%;
+			height: 20em;
+			background: darkcyan;
+			margin: 0px;
+			padding: 20px;
+			color: white;
+			border: 1px solid yellow;
 			text-align: center;
 		}
+
+		div#boxes{
+			display: flex;
+			max-width: 800px;
+			margin: auto;
+			border: 1px solid red;
+		}
 		
+		.box{
+			background: white;
+			border: whitesmoke;
+			color: black;
+			border-radius: 8px;
+			margin: auto;
+			width: 290px;
+			height: 190px;
+			padding: 30px;
+			
+		}
 	</style>
 
 	<script type="text/javascript">
-	
 
-	
 	</script>
 
 </head>
 
 <body>
 
-		<div id="area"  onmouseout="mouseout()">
-			intereja...
+	<div id="container">
+		
+		<div> <h2>As minhas caixas</h2> </div>
+		
+		<div id="boxes">
+			<div id="box1" class="box">
+				<label for="">Nome:</label>
+				<input type="name">
+				<br>
+				<label for="">Endereço:</label>
+				<input type="text">
+			</div>
+	
+			<div id="box2" class="box">
+				<label for="">Nome:</label>
+				<input type="name" disabled="disabled">
+				<br>
+				<label for="">Endereço:</label>
+				<input type="text" disabled="disabled">
+			</div>
 		</div>
+		
+	</div>
 
 
 	<script>
 
+		var x;
+		var y;
+
+		function clickGreen(){
+			
+		}
+
+
+
+
+
+
+
+
 		
-		var ok;
+		/*var ok;
         var x;
 
 		ok.addEventListner('click', click1)
@@ -46,7 +109,7 @@
 		function click1(){
 			var ok = document.getElementById('area');
 			ok.innerText = "clicou"
-		}
+		}*/
 
 	</script>
 
