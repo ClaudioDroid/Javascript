@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+
+	<style>
+        
+        body{
+            margin: 22px;
+        }
+
+        #caixa{
+            width: 250px;
+            height: 180px;
+            margin-top: 20px;
+
+            border: 1px solid gray;
+        }
+       
+		
+	</style>
+
+	<script type="text/javascript">
+
+	</script>
+
+</head>
+
+<body>
+
+    <button onclick="alteraCor('#FF0000')" >VERMELHO</button>
+    <button onclick="alteraCor('#00FF00')" >VERDE</button>
+    <button onclick="alteraCor('#0000FF')" >AZUL</button>
+    
+    <div id="caixa" style="width: 250px; height: 180px; margin-top: 20px; border: 1px solid gray;">
+        
+    </div>
+
+
+	<script>
+
+        var caixa;
+
+        function alteraCor(corDeFundo){
+            //alert(corDeFundo);
+            document.getElementById('caixa').style.background = corDeFundo;
+        }
+		
+
+	</script>
+
+</body>
+</html>
