@@ -32,6 +32,7 @@
     <button onclick="alteraCor('#FF0000')" >VERMELHO</button>
     <button onclick="alteraCor('#00FF00')" >VERDE</button>
     <button onclick="alteraCor('#0000FF')" >AZUL</button>
+    <button onclick="alteraLargura('700px')" >GIGANTE</button>
     
     <div id="caixa" style="width: 250px; height: 180px; margin-top: 20px; border: 1px solid gray;">
         
@@ -45,6 +46,10 @@
         function alteraCor(corDeFundo){
             //alert(corDeFundo);
             document.getElementById('caixa').style.background = corDeFundo;
+        }
+		
+        function alteraLargura(largura){
+            document.getElementById('caixa').style.width = largura;
         }
 		
 
