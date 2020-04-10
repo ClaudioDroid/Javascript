@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+
+	<style>
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav{
+            background: cornflowerblue;
+            border: 2px solid orange;
+        }
+
+        #foto{
+            border: 2px solid black;
+            width: 250px;
+            height: 250px;
+
+        }
+
+    </style>
+
+	<script type="text/javascript">
+
+        var personagem;
+
+        function escolhePersonagem(){
+           document.getElementById('foto').style.background = #eb4034;
+        }
+
+	</script>
+
+</head>
+
+<body>
+
+	<header>
+        <nav>
+            <h1 style="color: white;">DragonBall Z</h1>
+        </nav>
+    </header>
+
+    <section>
+
+        <label for="">Digite o nome de um personagem:</label>
+        <input id="escolha" type="text" placeholder="Ex.: goku">
+        <button onclick="">OK</button>
+        <br>
+
+        <p>Ou clique no botão:</p>
+        <button onclick="escolhePersonagem()">Vegeta</button>
+        <button>Trunks</button>
+        <button>Gohan</button>
+        <br><br>
+        <div id="foto" style="background-image: url('https://pbs.twimg.com/profile_images/720107745547038725/e21NA14j_400x400.jpg');">
+            
+        </div>
+
+    </section>
+
+</body>
+</html>
