@@ -22,8 +22,8 @@
         <main id="main" class="card card-body">
             <h3>Add Items</h3>
             <form action="">
-                <input type="text">
-                <input type="submit" class="bg-dark text-white">    
+                <input id="txt" type="text">
+                <input id="send" onclick="enviarItem()" type="submit" class="bg-dark text-white">    
             </form>
             <h3 class="title">Items</h3>
             <ul class="list-group">
@@ -46,11 +46,18 @@
 
         var button = document.getElementById('mybtn');
         button.addEventListener('click', myfunc)
+
+        function enviarItem(){
+            var sendName = document.getElementById('send');
+            var itemName = document.getElementById('txt');
+            console.log('itemName');
+        }
+        
+        
         
         function myfunc(a){
             //console.log(a.target)
-            var textt = document.querySelector('div p').textContent = ('Clicou! ' + '😁')
-            
+            var textt = document.querySelector('div p').textContent = ('Clicou! ' + '😁')  
         }
 
     </script>
