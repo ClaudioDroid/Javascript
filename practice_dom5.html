@@ -38,18 +38,19 @@
             </button>
         </main>
     </div>
+    <div>
+        <p></p>
+    </div>
 
     <script>
 
         var button = document.getElementById('mybtn');
         button.addEventListener('click', myfunc)
         
-        function myfunc(){
-            console.log('Foi clicado');
-            document.getElementById('headerTitle').textContent = 'Title changed'
-            document.querySelector('#main').style.background = 'red'
-
-        
+        function myfunc(a){
+            //console.log(a.target)
+            var textt = document.querySelector('div p').textContent = ('Clicou! ' + '😁')
+            
         }
 
     </script>
