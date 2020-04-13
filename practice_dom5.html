@@ -12,7 +12,7 @@
   </head>
   <body>
     
-    <header id="header" class="container bg-success text-white p-2">
+    <header id="header" class="container bg-success text-white p-2 w-100">
         <nav>
             <h1 id="headerTitle">Item Lister</h1>
         </nav>
@@ -21,10 +21,10 @@
     <div id="container" class="w-50 m-auto">
         <main id="main" class="card card-body">
             <h3>Add Items</h3>
-            <form action="">
+            <div id="form" class="form" action="">
                 <input id="txt" type="text">
                 <input id="send" onclick="enviarItem()" type="submit" class="bg-dark text-white">    
-            </form>
+            </div>
             <h3 class="title">Items</h3>
             <ul class="list-group">
                 <li id="myli" class="list-group-item">Item 1</li>
@@ -36,31 +36,46 @@
             <button id="mybtn" class="btn btn-dark text-white">
                 clique
             </button>
+            <br>
+            <div id="box" style="width:400px; height: 200px; background: darkgray;">
+               
+            </div>
+
         </main>
-    </div>
-    <div>
-        <p></p>
-    </div>
+    </div> <!-- /container -->
 
     <script>
 
-        var button = document.getElementById('mybtn');
-        button.addEventListener('click', myfunc)
+        //var button = document.getElementById('mybtn');
+        //button.addEventListener('click', myfunc)
+
+        var form = document.getElementById('form');
+        var box = document.getElementById('box');
+        box.addEventListener('click', changeColor);
+        box.addEventListener('mousemove', changeColor);
+        form.addEventListener('keydown', changeColor)
+
+        function changeColor(e){
+            console.log('EVENT TYPE: '+e.type);
+            
+            //box.style.backgroundColor = 'red';
+        }
 
         function enviarItem(){
-            var sendName = document.getElementById('send');
-            var itemName = document.getElementById('txt');
-            var item1 = document.getElementById('myli');
-            item1.document.getElementById('myli').value;
-            console.log('itemName');
+            var text = document.getElementById('txt').value;
+            document.getElementById('myli').innerHTML = (text)
+            console.log(text);
         }
         
+
+
+          //var button = document.getElementById('mybtn');
+        //button.addEventListener('click', myfunc)
         
-        
-        function myfunc(a){
+        /*function myfunc(a){
             //console.log(a.target)
             var textt = document.querySelector('div p').textContent = ('Clicou! ' + '😁')  
-        }
+        }*/
 
     </script>
 
