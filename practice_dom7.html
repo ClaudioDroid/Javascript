@@ -17,7 +17,7 @@
 <body>
 
 	<label for="">Insira seu nome:</label>
-	<input type="text" onfocus="onFocus()" onblur="onBlur()"> 
+	<input type="text" onfocus="onFocus()" onblur="onBlur()"> <button onclick="clearTxt()" style="color: red;">X</button>
 	<input type="submit" onclick="sendData()"> <span style="font-size: 0.8em; color: red;"></span>
 	<br><hr><br>
 	<input id="bank" type="text" disabled="disabled">
@@ -29,22 +29,28 @@
 		}
 
 		function onBlur(){
-			var txt = document.querySelector('input').value;
+			var txt = document.querySelector('input').value.trim(); //Receive the value without spaces in borders
 			if( txt.length < 3 ){
 				document.querySelector('input').style.backgroundColor = 'red';
 				document.querySelector('span').innerText = "*Insira um nome com mais de dois caracteres!"
 			}else{
 				document.querySelector('input').style.backgroundColor = 'green';
+				}
 			}
-		}
 
 		function sendData(){
 			if( document.querySelector('input').style.backgroundColor == 'green' ){
 				var nameData = document.querySelector('input').value;
-				console.log(nameData);
 				document.getElementById('bank').value = nameData;
 				document.querySelector('span').textContent = '';
+				console.log(nameData);
 			}
+		}
+
+		function clearTxt(){
+			document.querySelector('input').value = ''
+			document.querySelector('input').style.backgroundColor = 'white';
+			document.querySelector('input').focus();
 		}
 
 	</script>
