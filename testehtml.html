@@ -5,45 +5,10 @@
 	<meta charset="utf-8">
 
 	<style>
-		body{
-			margin: 0px;
-			padding: 0px;
-		}
-
-		input{
-			margin-bottom: 20px;
-		}
-
-		div#container{
-			width: 100%;
-			height: 20em;
-			background: darkcyan;
-			margin: 0px;
-			padding: 20px;
-			color: white;
-			text-align: center;
-		}
-
-		div#boxes{
-			display: flex;
-			max-width: 800px;
-			margin: auto;
-		}
 		
-		.box{
-			background: white;
-			border: whitesmoke;
-			color: black;
-			border-radius: 8px;
-			margin: auto;
-			width: 290px;
-			height: 190px;
-			padding: 30px;
-			
-		}
 	</style>
 
-	<script type="text/javascript">
+	<script>
 
 	</script>
 
@@ -51,87 +16,35 @@
 
 <body>
 
-	<div id="container">
-		
-		<div> <h2>As minhas caixas</h2> </div>
-		
-		<div id="boxes">
-
-			<div  class="box">
-				<h3>CADASTRO</h3>
-				<label for="">Nome:</label>
-				<input id="nomeEntrada" type="name">
-				<br>
-				<label for="">Endereço:</label>
-				<input id="enderecoEntrada" type="text">
-				<br>
-				<label for="">Senha:</label>
-				<input id="senhaEntrada" type="password">
-			</div>
-	
-			<div  class="box">
-				<h3>EXIBIÇÃO</h3>
-				<label for="">Nome:</label>
-				<input id="nomeSaida" type="name" disabled="disabled">
-				<br>
-				<label for="">Endereço:</label>
-				<input id="enderecoSaida" type="text" disabled="disabled">
-				<br>
-				<label for="">Senha:</label>
-				<input id="senhaSaida" type="password" disabled="disabled">
-			</div>
-			
-		</div>
-
-		<button onclick="sendName()" >Enviar</button>
-		
-	</div>
+	<input id="myInput" onkeyup="contChar()" type="text/javascript" type="text">
 
 
 	<script>
 
-		var name;
-		var end;
-		var senha;
+		var myInput = document.getElementById('myInput');
+		var cont = 0;
+		myInput.addEventListener('focus', focus);
+		myInput.addEventListener('focusout', focusOut);
 
-		function sendName(){
-			var name = document.getElementById("nomeEntrada").value;
-			document.getElementById("nomeSaida").value = name;
-			document.getElementById("nomeEntrada").value = '';
-
-			var end = document.getElementById("enderecoEntrada").value;
-			document.getElementById("enderecoSaida").value = end;
-			document.getElementById("enderecoEntrada").value = '';
-
-			var senha = document.getElementById("senhaEntrada").value;
-			document.getElementById("senhaSaida").value = senha;
-			document.getElementById("senhaEntrada").value = '';
+		function contChar(){
+			cont++;
+			console.log(cont);
 		}
 
-		
-
-
-
-
-
-
-
-		
-		/*var ok;
-        var x;
-
-		ok.addEventListner('click', click1)
-		
-
-		function mouseout(){
-			var x = document.getElementById("area");
-			x.innerText = "intereja";
+		function focus(){
+			myInput.style.backgroundColor = 'yellow';
 		}
-
-		function click1(){
-			var ok = document.getElementById('area');
-			ok.innerText = "clicou"
-		}*/
+		function focusOut(){
+			
+			if( cont < 3){
+				myInput.style.backgroundColor = 'red';
+				cont = 0;
+			}else{
+				myInput.style.backgroundColor = 'green';
+				cont = 0;
+			}
+		}
+	
 
 	</script>
 

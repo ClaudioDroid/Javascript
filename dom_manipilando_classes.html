@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+    <meta charset="utf-8">
+    
+    <style>
+        .estilo1{
+            background: darkslateblue;
+            color: #ffffff;
+            font-weight: 300;
+            width: 400px;
+            height: 80px;
+            text-align: center;
+        }
+
+        .estilo2{
+            color: deeppink;
+        }
+    </style>
+
+	<script type="text/javascript">
+	
+	</script>
+
+</head>
+
+<body>
+
+    <h3 id="myText" class="estilo1">O texto que será modificado.</h3>
+    <br>
+    <button id="myBtn" onclick="changeClass()" >Modificar</button>
+
+    <script>
+
+        var text = document.getElementById('myText');
+
+        function changeClass(){
+            text.className = 'estilo2';
+        }
+
+    </script>
+
+</body>
+</html>
