@@ -57,41 +57,67 @@
             <input type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
             
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
+              <button type="button" onclick="calcular('acao', 'c')" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+              <button type="button" onclick="calcular('acao', '/')" class="btn btn-dark btn-lg font-weight-light">/</button>
+              <button type="button" onclick="calcular('acao', '*')" class="btn btn-dark btn-lg font-weight-light">x</button>
             </div>
 
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+              <button type="button" onclick="calcular('valor', 7)" class="btn btn-dark btn-lg font-weight-light">7</button>
+              <button type="button" onclick="calcular('valor', 8)" class="btn btn-dark btn-lg font-weight-light">8</button>
+              <button type="button" onclick="calcular('valor', 9)" class="btn btn-dark btn-lg font-weight-light">9</button>
+              <button type="button" onclick="calcular('acao', '-')" class="btn btn-dark btn-lg font-weight-light">-</button>
             </div>
             
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
+              <button type="button" onclick="calcular('valor', 4)" class="btn btn-dark btn-lg font-weight-light">4</button>
+              <button type="button" onclick="calcular('valor', 5)" class="btn btn-dark btn-lg font-weight-light">5</button>
+              <button type="button" onclick="calcular('valor', 6)" class="btn btn-dark btn-lg font-weight-light">6</button>
+              <button type="button" onclick="calcular('acao', '+')" class="btn btn-dark btn-lg font-weight-light">+</button>
             </div>
 
             <div class="row">
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
-              <button type="button" class="btn btn-dark btn-lg enter">=</button>
+              <button type="button" onclick="calcular('valor', 1)"  class="btn btn-dark btn-lg font-weight-light">1</button>
+              <button type="button" onclick="calcular('valor', 2)" class="btn btn-dark btn-lg font-weight-light">2</button>
+              <button type="button" onclick="calcular('valor', 3)" class="btn btn-dark btn-lg font-weight-light">3</button>
+              <button type="button" onclick="calcular('acao', '=')" class="btn btn-dark btn-lg enter">=</button>
             </div>
 
             <div class="row" style="margin-top: -60px">
-              <button type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
-              <button type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+              <button type="button" onclick="calcular('valor', 0)"  class="btn btn-dark zero btn-lg font-weight-light">0</button>
+              <button type="button" onclick="calcular('acao', '.')" class="btn btn-dark btn-lg font-weight-light">.</button>
             </div>
 
           </div>
         </div>
       </div>
-    </div>    
+    </div>  
+
+    <script>
+      
+      function calcular( tipo, valor ){
+        if( tipo === 'valor' ){
+          //document.querySelector('input').value = (document.querySelector('input').value) + valor;
+          document.querySelector('input').value += valor; // += concatena e receber o valor
+        }else{ 
+          if( tipo === 'acao' ){
+            if(valor === 'c'){
+              document.querySelector('input').value = '';
+            }
+            if (valor === '+' || valor === '-' || valor === '*' || valor === '/' || valor === '.'){
+              //document.querySelector('input').value = document.querySelector('input').value + valor;
+              document.querySelector('input').value += valor;
+            }
+            if (valor === '='){
+              var res = eval(document.querySelector('input').value); // Eval: executando a String como um Número.
+              document.querySelector('input').value = res;
+            }            
+          }
+        }
+      } //  /Calcular Fim
+
+    </script>
+    
   </body>	
 
 </html>
