@@ -32,38 +32,51 @@
 
     <div id="calculator" class="mt-4">
         
-        <div id="base" class="bg-warning rounded m-auto p-3" style="width: 300px; height: 500px;">
-            <input type="text" class="input-group">
+        <div id="base" class="bg-warning rounded m-auto p-3 border border-dark shadow" style="width: 260px; height: 320px;">
+            <input type="text" disabled="disabled" placeholder="0" class="input-group mb-4 rounded bg-white border-dark text-right">
             
-            <div class="d-block">
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 7</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 8</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 9</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> /</button>
+            <div class="d-flex justify-content-around">
+                <button onclick="calcular('numero', 7)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 7</button>
+                <button onclick="calcular('numero', 8)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 8</button>
+                <button onclick="calcular('numero', 9)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 9</button>
+                <button onclick="calcular('operacao', '/')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> /</button>
             </div>
-            
-            <div class="d-block">
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 4</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 5</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 6</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> x</button>
+            <div class="d-flex justify-content-around">
+                <button onclick="calcular('numero', 4)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 4</button>
+                <button onclick="calcular('numero', 5)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 5</button>
+                <button onclick="calcular('numero', 6)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 6</button>
+                <button onclick="calcular('operacao', 'x')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> x</button>
             </div>
-            <div class="d-block">
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 1</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 2</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 3</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> -</button>
+            <div class="d-flex justify-content-around">
+                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 1</button>
+                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 2</button>
+                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 3</button>
+                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> -</button>
             </div>
-            <div class="d-block">
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> 0</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> .</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> =</button>
-                <button class="btn btn-dark btn-lg btn-outline-secondary text-white"> +</button>
+            <div class="d-flex justify-content-around">
+                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 0</button>
+                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> .</button>
+                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> =</button>
+                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> +</button>
             </div>
 
-        </div>
+        </div> <!-- /Base end -->
+    </div> <!-- /Calculator end -->
 
-    </div>
+    <script>
+
+        function calcular(item, valor){
+            if(item === "numero"){
+                //console.log("numero");
+                document.querySelector('input').value =  
+            }else{
+                if(item === "operacao"){
+
+                }
+            }
+        }
+
+    </script>
 
 
     <!-- Optional JavaScript -->
