@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>All tools!</title>
   </head>
   <body>
 
@@ -33,7 +33,7 @@
     <div id="calculator" class="mt-4">
         
         <div id="base" class="bg-warning rounded m-auto p-3 border border-dark shadow" style="width: 260px; height: 320px;">
-            <input type="text" disabled="disabled" placeholder="0" class="input-group mb-4 rounded bg-white border-dark text-right">
+            <input id="calcScreen" type="text" disabled="disabled" placeholder="0" dir="rtl" class="input-group mb-4 rounded bg-white border-dark ttext-right">
             
             <div class="d-flex justify-content-around">
                 <button onclick="calcular('numero', 7)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 7</button>
@@ -48,16 +48,16 @@
                 <button onclick="calcular('operacao', 'x')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> x</button>
             </div>
             <div class="d-flex justify-content-around">
-                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 1</button>
-                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 2</button>
-                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 3</button>
-                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> -</button>
+                <button onclick="calcular('numero', 1)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 1</button>
+                <button onclick="calcular('numero', 2)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 2</button>
+                <button onclick="calcular('numero', 3)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 3</button>
+                <button onclick="calcular('operacao', '-')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> -</button>
             </div>
             <div class="d-flex justify-content-around">
-                <button onclick="calcular('numero', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 0</button>
-                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> .</button>
-                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> =</button>
-                <button onclick="calcular('operacao', 'valor')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> +</button>
+                <button onclick="calcular('numero', 0)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 0</button>
+                <button onclick="calcular('operacao', '.')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> .</button>
+                <button onclick="calcular('operacao', '=')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> =</button>
+                <button onclick="calcular('operacao', '+')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> +</button>
             </div>
 
         </div> <!-- /Base end -->
@@ -68,7 +68,7 @@
         function calcular(item, valor){
             if(item === "numero"){
                 //console.log("numero");
-                document.querySelector('input').value =  
+                document.getElementById('calcScreen').value += valor; 
             }else{
                 if(item === "operacao"){
 
