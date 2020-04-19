@@ -28,12 +28,19 @@
         <label for=""><h4>What tool do you want? </h4></label>
         <input type="text" class="input">
         <input type="submit" class="btn btn-primary">
+        
+        <div id="buttons" class="border m-2 p-2">
+            <h4>Choose a tool:</h4>
+            <button onclick="showTool(calculator)" class="btn btn-secondary" >Calculator</button>
+            <button class="btn btn-secondary">Example2</button>
+            <button class="btn btn-secondary">Example3</button>
+        </div>
     </div>
 
-    <div id="calculator" class="mt-4">
+    <div id="calculator" class="mt-4" style="visibility: collapse;">
         
         <div id="base" class="bg-warning rounded m-auto p-3 border border-dark shadow" style="width: 260px; height: 320px;">
-            <input id="calcScreen" type="text" disabled="disabled" placeholder="0" dir="rtl" class="input-group mb-4 rounded bg-white border-dark ttext-right">
+            <input id="calcScreen" type="text" disabled="disabled" placeholder="0" class="input-group mb-4 rounded bg-white border-dark text-right">
             
             <div class="d-flex justify-content-around">
                 <button onclick="calcular('numero', 7)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 7</button>
@@ -45,7 +52,7 @@
                 <button onclick="calcular('numero', 4)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 4</button>
                 <button onclick="calcular('numero', 5)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 5</button>
                 <button onclick="calcular('numero', 6)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 6</button>
-                <button onclick="calcular('operacao', 'x')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> x</button>
+                <button onclick="calcular('operacao', '*')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> x</button>
             </div>
             <div class="d-flex justify-content-around">
                 <button onclick="calcular('numero', 1)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 1</button>
@@ -55,7 +62,7 @@
             </div>
             <div class="d-flex justify-content-around">
                 <button onclick="calcular('numero', 0)" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> 0</button>
-                <button onclick="calcular('operacao', '.')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> .</button>
+                <button onclick="calcular('numero', '.')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> .</button>
                 <button onclick="calcular('operacao', '=')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> =</button>
                 <button onclick="calcular('operacao', '+')" class="btn btn-dark btn-lg btn-outline-secondary text-white m-1 btn-block"> +</button>
             </div>
@@ -71,8 +78,23 @@
                 document.getElementById('calcScreen').value += valor; 
             }else{
                 if(item === "operacao"){
-
+                    if( valor === '='){
+                        var result = ( eval(document.getElementById('calcScreen').value) )
+                        document.getElementById('calcScreen').value = result;
+                    }else{
+                        if(valor === "+" || valor === "-" || valor === "*" || valor === "/"){
+                            document.getElementById('calcScreen').value += valor;
+                            //var res = document.getElementById('calcScreen').value;
+                        }
+                    }
+                    
                 }
+            }
+        }
+
+        function showTool(tool){
+            if (tool = "calculator"){
+                document.getElementById('calculator').style.visibility = 'visible'; //Collapse hides element and set its space free for other content.
             }
         }
 
