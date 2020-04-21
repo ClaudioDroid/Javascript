@@ -8,24 +8,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>All tools!</title>
+    <title>JS</title>
   </head>
   <body>
 
 
     <script>
+        //Arrays Multimensionais: São Arrays que apontam para outros Arrays
 
-        //var lista_frutas = Array ('Banana', 'Maçã', 'Morago', 'Uva');
-        //var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'];
-        //var lista_frutas = []; Uma outra forma de criar Arrays.
-        var lista_frutas = Array();
-        lista_frutas[1] = 'banana';
-        lista_frutas[2] = 'maça';
-        lista_frutas[3] = 'morango';
-        lista_frutas['x'] = 'uva';
-        lista_frutas['5'] = 'pera';
-        
-        console.log(lista_frutas.length);
+        var lista_coisas = Array();
+
+        lista_coisas['frutas'] = Array();
+        lista_coisas['pessoas'] = Array ('Juao', 'Creuza', 'Craudialyne');
+
+        lista_coisas['frutas'][1] = 'Banana';
+        lista_coisas['frutas'][2] = 'Abacaxi';
+        lista_coisas['frutas'][3] = 'Maça';
+        lista_coisas['frutas'][4] = 'Uva';
+
+        console.log(lista_coisas);
+
+        document.write(lista_coisas['pessoas'][1])
 
     </script>
 
