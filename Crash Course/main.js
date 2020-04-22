@@ -30,12 +30,20 @@ console.log('Your name is ' + yourName + ' and you are ' + age);
 console.log(`My name is ${name} and I am ${age}`)
 
 
-/* -----  ----- */
+/* ----- Methods and propertys ----- */
 const s = 'Hello world';
 
 console.log(s.length);
 console.log(s.substring(0, 4).toUpperCase());
 console.log( s.split('') );
+
+
+/* ----- Arrays: variables that holds multiple values ----- */
+
+
+
+
+
 
 
 
