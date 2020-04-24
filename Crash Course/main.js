@@ -39,6 +39,9 @@ console.log( s.split('') );
 
 
 /* ----- Arrays: variables that holds multiple values ----- */
+let fruits = ['Apple', 'Orange', 'Banana', 'Berry'];
+console.log(fruits);
+
 
 
 
