@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<meta charset="utf-8">
+
+	<style>
+		
+	</style>
+
+	<script>
+
+	</script>
+ 
+</head>
+
+<body>
+
+	
+  <script>
+
+    let lista_funcionarios = [
+      'Viviane', 'Miguel', 'Rosângela',
+      'Lucas', 'Fernanda'
+    ]
+
+    lista_funcionarios.forEach(function(valor, indice, array){
+      console.log('indice: '+ indice + ' | valor: ' + valor);
+      
+      if (valor == 'Lucas'){
+        array[indice] = 'Crebsu';
+      }
+      
+    })
+    console.log(lista_funcionarios);
+
+  </script>
+
+</body>
+</html>
