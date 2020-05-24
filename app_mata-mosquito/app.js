@@ -1,7 +1,7 @@
 let width =window.innerWidth ;
 let height =window.innerHeight ;
 
-function ajustaTamanhoPalgoJogo(){
+function ajustaTamanhoPalcoJogo(){
   let width =window.innerWidth ;
   let height =window.innerHeight ;
   console.log(width, height);
