@@ -68,17 +68,9 @@ function ladoAleatório(){
   if (lado == 1){ return 'scaleX(1)'};
   if (lado == 2){ return 'scaleX(-1)'};
 }
-/*
-function removeCoracao(){
-  console.log(vidas);
-  document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
-  vidas++;
-  if (vidas > 3){
-    alert('Game Over!!!');
 
-  }
-}
-*/
+
+
 
 
 
