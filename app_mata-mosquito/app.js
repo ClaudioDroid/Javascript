@@ -1,5 +1,6 @@
 let width =window.innerWidth ;
 let height =window.innerHeight ;
+let vidas = 1;
 
 function ajustaTamanhoPalcoJogo(){
   let width =window.innerWidth ;
@@ -12,6 +13,13 @@ function posicaoRandomica(){
   // removendo o mosquito anterior caso exista.
   if ( document.getElementById('mosquito') ){ //Verificando se esse elemento existe.
     document.getElementById('mosquito').remove();
+    //removeCoracao(); // Deixando o coração vazio caso o usuário não clique no mosquito.
+    if (vidas > 3){
+      window.location.href = 'fim_do_jogo.html';
+    }else{
+      document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+      vidas++
+    }
   }
 
   // Definindo a posição randômica para o mosquito
@@ -26,7 +34,7 @@ function posicaoRandomica(){
     posicaoY += 95;
   }
 
-  console.log(posicaoX, posicaoY);
+  //console.log(posicaoX, posicaoY);
   
   // Criando o elemento HTML.
   let mosquito = document.createElement('img');
@@ -37,6 +45,9 @@ function posicaoRandomica(){
   mosquito.style.left = posicaoX + 'px';
   mosquito.style.top = posicaoY + 'px';
   mosquito.id = 'mosquito';
+  mosquito.onclick = function (){
+    this.remove()
+  }
   
   document.body.appendChild(mosquito);  
 }
@@ -44,7 +55,7 @@ function posicaoRandomica(){
 // Define o tamanho que o mosquito será exibido (1, 2 ou 3).
 function tamanhoAleatorio(){
   let classe = Math.ceil(Math.random() * 3);
-  console.log('tamanho:' + classe);
+  //console.log('tamanho:' + classe);
   if (classe == 1){ return 'mosquito1'}
   if (classe == 2){ return 'mosquito2'}
   if (classe == 3){ return 'mosquito3'}
@@ -53,12 +64,21 @@ function tamanhoAleatorio(){
 // Define o lado em que o mosquito será exibido (normal ou invertido).
 function ladoAleatório(){
   let lado = Math.ceil(Math.random() * 2);
-  console.log ('lado:' + lado);
+  //console.log ('lado:' + lado);
   if (lado == 1){ return 'scaleX(1)'};
   if (lado == 2){ return 'scaleX(-1)'};
 }
+/*
+function removeCoracao(){
+  console.log(vidas);
+  document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
+  vidas++;
+  if (vidas > 3){
+    alert('Game Over!!!');
 
-
+  }
+}
+*/
 
 
 
