@@ -18,16 +18,16 @@
       <img id="v3" src="imagens/coracao_cheio.png" alt="">
     </div>
     <div class="cronometro">
-      Tempo restante: ?
+      Tempo restante: <span id="cronometro"></span>
     </div>
   </div>
 
   <script>
 
     // Executando a função posicaoRandomica a cada 1 segundo.
-    setInterval(function(){
+    let criarMosquito = setInterval(function(){
       posicaoRandomica();
-    }, 2000);
+    }, 1000);
   </script>
 
 </body>

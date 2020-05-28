@@ -1,12 +1,28 @@
 let width =window.innerWidth ;
 let height =window.innerHeight ;
 let vidas = 1;
+let tempo = 10;
 
 function ajustaTamanhoPalcoJogo(){
   let width =window.innerWidth ;
   let height =window.innerHeight ;
   console.log(width, height);
 }
+
+// Cronometro do jogo
+let cronometro = setInterval(function(){
+  tempo -= 1;
+
+  if(tempo < 0){
+    clearInterval(cronometro); // Eliminando a função setInterval da memória da aplicação.
+    clearInterval(criarMosquito); // Fazendo o jogo parar após vencer o jogo.
+    alert("vitoria")
+  }else{
+    document.getElementById('cronometro').innerHTML = tempo;
+  }
+}, 1000);
+
+
 
 function posicaoRandomica(){
 
@@ -68,6 +84,7 @@ function ladoAleatório(){
   if (lado == 1){ return 'scaleX(1)'};
   if (lado == 2){ return 'scaleX(-1)'};
 }
+
 
 
 
