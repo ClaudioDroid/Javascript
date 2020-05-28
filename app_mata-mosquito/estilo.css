@@ -1,3 +1,7 @@
+html{
+  cursor:url(imagens/mata_mosca.png) 30 30, auto;
+}
+
 body{
   background: url(imagens/bg.jpg) no-repeat rgb(118, 181, 40) ;
 }
@@ -40,4 +44,5 @@ body{
 .width10{
   width: 169px;
 }
+
 

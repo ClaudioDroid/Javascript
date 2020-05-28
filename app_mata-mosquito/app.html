@@ -10,7 +10,6 @@
 
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
-  
   <div class="painel">
     <div class="vidas">
       <img id="v1" src="imagens/coracao_cheio.png" alt="">
@@ -21,13 +20,16 @@
       Tempo restante: <span id="cronometro"></span>
     </div>
   </div>
+ 
+
+
 
   <script>
 
     // Executando a função posicaoRandomica a cada 1 segundo.
     let criarMosquito = setInterval(function(){
       posicaoRandomica();
-    }, 1000);
+    }, tempoDoMosquito);
   </script>
 
 </body>

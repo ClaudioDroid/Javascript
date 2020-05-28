@@ -1,7 +1,31 @@
 let width =window.innerWidth ;
 let height =window.innerHeight ;
 let vidas = 1;
-let tempo = 10;
+let tempo = 15;
+
+let nivel = window.location.search;
+nivel = nivel.replace('?', '');
+
+let tempoDoMosquito = 4000;
+
+if (nivel == 'facil'){
+  tempoDoMosquito = 2000;
+}else{
+  if (nivel == 'normal'){
+    tempoDoMosquito = 1500;
+  }else{
+    if (nivel == 'dificil'){
+      tempoDoMosquito = 1000;
+    }else{
+      if (nivel == 'chucknorris'){
+        tempoDoMosquito = 720;
+      }else{
+        //tempoDoMosquito = 5000;
+      }
+    }
+  }
+}
+let dificuldade = nivel;
 
 function ajustaTamanhoPalcoJogo(){
   let width =window.innerWidth ;
@@ -91,10 +115,10 @@ function iniciarJogo(){
   if (nivel == ''){
     alert ('Selecione um nível para iniciar o jogo!');
   }else{
-    alert(nivel);
+    location.href='app.html' + '?' + nivel;
+    
   }
   
-  // location.href='app.html';
 }
 
 
