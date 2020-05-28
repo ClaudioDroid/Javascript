@@ -1,6 +1,5 @@
 body{
-  background-image: url(imagens/bg.jpg);
-  background-repeat: no-repeat;
+  background: url(imagens/bg.jpg) no-repeat rgb(118, 181, 40) ;
 }
 
 .mosquito1{
@@ -38,5 +37,7 @@ body{
   font-weight: bold;
 }
 
-
+.width10{
+  width: 169px;
+}
 

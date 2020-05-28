@@ -16,7 +16,7 @@ let cronometro = setInterval(function(){
   if(tempo < 0){
     clearInterval(cronometro); // Eliminando a função setInterval da memória da aplicação.
     clearInterval(criarMosquito); // Fazendo o jogo parar após vencer o jogo.
-    alert("vitoria")
+    window.location.href = 'vitoria.html';
   }else{
     document.getElementById('cronometro').innerHTML = tempo;
   }
@@ -33,8 +33,8 @@ function posicaoRandomica(){
     if (vidas > 3){
       window.location.href = 'fim_do_jogo.html';
     }else{
-      document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
-      vidas++
+      document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png";
+      vidas++;
     }
   }
 
@@ -85,7 +85,17 @@ function ladoAleatório(){
   if (lado == 2){ return 'scaleX(-1)'};
 }
 
-
+function iniciarJogo(){
+  let nivel = document.getElementById('nivel').value;
+  
+  if (nivel == ''){
+    alert ('Selecione um nível para iniciar o jogo!');
+  }else{
+    alert(nivel);
+  }
+  
+  // location.href='app.html';
+}
 
 
 
