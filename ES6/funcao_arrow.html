@@ -21,6 +21,20 @@
 
         // Executando a função dentro da variável
         document.write( quadrado(3) );
+        
+        /*
+        let parOuImpar = x => {
+            if (x % 2 == 0){
+                return ('par');
+            }else{
+                return ('impar');
+            }
+        }*/
+
+        // If ternário
+        let parOuImpar = x => x % 2 == 0 ? 'par' : 'impar';
+       
+        console.log( parOuImpar(20) ) ;
 
     </script>
 
