@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Modelo para criar objetos
+        class ContaBancaria {
+            //agencia
+            //numeroConta
+            //saldo
+            //limite
+            constructor(){ // Construindo atributos
+                this.agencia = 1064;
+                this.numeroConta = 1104;
+                this.saldo = 50;
+                this.limite = 500;
+            }
+            //Construindo ações (Métodos)
+            depositar(valorDeposito){
+                this.saldo += valorDeposito;
+            }
+            sacar(valorSaque){
+                this.saldo -= valorSaque;
+            }
+            consultarSaldo(){
+                return this.saldo;
+            }
+        }
+
+        // New: transformando a classe em objeto para ser usado no código.
+        let x = new ContaBancaria();
+        let y = new ContaBancaria();
+
+        console.log( x.consultarSaldo() );
+        x.depositar(200);
+        console.log( x.consultarSaldo() );
+        x.sacar(80);
+        console.log( x.consultarSaldo() );
+
+        console.log( y.consultarSaldo() );
+
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+
+</body>
+</html>
