@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+      // CLASS //
+      class Animal {
+        // ATRIBUTOS //
+        constructor(){
+          this.cor = '';
+          this.tamanho = null;
+        }
+        // MÉTODOS //
+        dormir(){
+          console.log('Dormir! ')
+        }
+      }
+
+      // CLASS //
+      class Cachorro extends Animal{ //A classe cachorro está herdando os atributos e métodos da classe Animal;
+        // ATRIBUTOS //
+        constructor(){
+          super();
+          this.orelhas = 'Grandes e caidas';
+        }
+        // MÉTODOS //
+        correr(){
+          console.log('Correr! ');
+        }
+        rosnar(){
+          console.log('Rosnar! ');
+        }
+      }
+
+      // CLASS //
+      class Passaro extends Animal{
+        // ATRIBUTOS //
+        constructor(){
+          super();
+          this.bico = 'curto';
+        }
+        // MÉTODOS //
+        voar(){
+          console.log('Voar!');
+        }
+      }
+
+      //CLASSE//
+      class Papagaio extends Passaro {
+        //ATRIBUTOS//
+        constructor(){
+          super();
+          this.fala = true;
+        }
+        //MÉTODO//
+        falar(){
+          console.log('Falando! ')
+        }
+      }
+
+      // Instanciando os OBJETOS //
+      let cachorro = new Cachorro();
+      let passaro = new Passaro();
+      let papagaio = new Papagaio();
+
+      cachorro.dormir();
+      papagaio.falar();
+
+      console.log(cachorro);
+      console.log(passaro);
+      console.log(papagaio);
+
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+
+</body>
+</html>
