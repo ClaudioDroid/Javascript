@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+      function ok(){ // ok //
+        let nome = document.getElementById('campoNome').value;
+        let idade = document.getElementById('campoIdade').value;
+        let sexo = document.getElementById('campoSexo').value;
+        let profissao = document.getElementById('campoProfissao').value;
+
+        let objeto = { // Atributo do objeto recebendo o valor das variáveis.
+          nome: nome,
+          idade: idade,
+          sexo, // Novo maneira de atribuir valor à variável no ES6.
+          profissao, // Novo maneira de atribuir valor à variável no ES6.
+          exibirResumo(){ // nova mandeira de escrever a função, invés de "exibirResumo: function(){"
+            console.log(`${this.nome}, ${this.idade} anos, ${sexo} é ${profissao}.`);
+          }
+        }
+
+        console.log(objeto);
+        objeto.exibirResumo();
+
+
+
+      } // /ok //
+
+      
+
+      function enviarDados(){
+        let nome = document.getElementById('campoNome').value;
+        let idade = document.getElementById('campoIdade').value;
+        let sexo = document.getElementById('campoSexo').value;
+        let profissao = document.getElementById('campoProfissao').value;
+      }
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+    <div id="container">
+
+      <label for="">Nome: </label>
+      <input id="campoNome" type="text">
+      <br><br>
+
+      <label for="">Idade: </label>
+      <input id="campoIdade"  type="text">
+      
+      <label for="">Sexo:</label>
+      <select id="campoSexo" name="Sexo" id="">
+        <option disabled selected value="m">- Selecione -</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+      </select>
+      <br><br>
+      <label for="">Profissão</label>
+      <input id="campoProfissao" type="text">
+    
+      <input onclick="ok()" type="submit">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    //CLASSE
+    class Produto {
+      //ATRIBUTOS
+      constructor(preco, descricao){
+        this.preco = preco;
+        this.descricao = descricao;
+      }
+      //MÉTODOS
+      verDescricao(){
+        console.log(`${this.descricao} Por apenas: R$ ${this.preco}`);
+      }
+    }
+    //OBJETOS
+    let produto = new Produto(2200, 'Notebook');
+    produto.verDescricao()
+
+    // --------------------------
+    let produtoLiteral = {
+      descricao: 'Geladeira',
+      preco: 1300,
+      verDescricao: function(){
+        console.log(`${this.descricao} Por apenas: R$ ${this.preco}`);
+      }
+    }
+    produtoLiteral.verDescricao();
+
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+
+</body>
+</html>
