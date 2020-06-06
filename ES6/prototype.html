@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+      // Objeto literal
+      let a1 = {
+        cor: 'cinza',
+        modelo: 'Airbus',
+        
+      }
+
+      //Função construtora.
+      let Aviao = function() {
+        this.cor = 'branco',
+        this.modelo = '14bis',
+        this.levantarVoo = function(){
+          console.log('Levantando voo!');
+        }
+      }
+
+      // Objeto baseado em função construtora
+      let a2 = new Aviao()
+      
+      // CLasse
+      class AvisaoClasse {
+        constructor(){
+          this.cor = 'rosa',
+          this.modelo = 'Boeing'
+        }
+        levantarVoo(){
+          cconsole.log('Levantando voo!');
+        }
+      }
+      // Objeto baseado na classe
+      let a3 = new AvisaoClasse();
+
+      console.log(a1);
+      console.log(a2);
+      console.log(a3);
+      
+
+
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+   
+
+</body>
+</html>
