@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+      let Bicicleta1 = {
+        cor: 'branca',
+        marcha: 'única',
+        aro: 12,
+        pedalar(){
+          console.log('Pedelando...');
+        }
+      }
+
+      let Bicicleta2 = {
+        cor: 'vermelha',
+        marcha: 18,
+        aro: 16,
+        pedalar(){
+          console.log('Pedelando...');
+        }
+      }
+
+      console.log(Bicicleta1);
+      console.log(Bicicleta2);
+
+      let BicicletaFactory = function(cor, marcha, aro){
+        return{
+          cor: cor,
+          marcha, //Maneira enxuta de criar o atributo/parâmetro com mesmo nome.
+          aro: aro,
+          pedalar(){ console.log('Pedelando...'); }
+        }
+      }
+
+      let Bicicleta3 = BicicletaFactory('azul', 6, 16);
+      console.log(Bicicleta3);
+
+      let Bicicleta4 = BicicletaFactory('vede', 8, 16);
+      console.log(Bicicleta4);
+      
+      let Bicicleta5 = BicicletaFactory('amarelha', 10, 14);
+      console.log(Bicicleta5);
+
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+   
+
+</body>
+</html>
