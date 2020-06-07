@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+      //String
+      let meuTexto = 'Esse é o meu texto de teste para o spread. </br>';
+
+      console.log(meuTexto);
+      console.log(...meuTexto);
+      console.log([...meuTexto]);
+
+      // Array
+      let listaCursos1 = ['NodeJS e MongoDB', 'ES6', 'Typescript e Angula4'];
+      let listaCursos2 = ['Android/IOS', 'Introdução ao GNU/Linux'];
+      let listaCUrsosCompletos = ['WEb Completo', 'Android Completo',...listaCursos1, ...listaCursos2];
+
+      console.log(listaCUrsosCompletos);
+
+      // Objetos
+      let pessoa = { nome: 'Zezo', idade: 47, altura: 1.65, formacao: 'TI' };
+      let clone = { endereco: 'Rua abc', ...pessoa }
+
+      console.log (clone);
+
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+   
+
+</body>
+</html>
