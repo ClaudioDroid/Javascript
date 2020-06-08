@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        let produto = {
+          descricao: 'notebook',
+          preco: 1800,
+          detalhes: {
+            fabricante: 'Acer',
+            modelo: 'Aspire'
+          }
+        }
+        // Extraindo do objeto
+        //let { descricao, preco } = produto;
+        //console.log(descricao, preco);
+
+        // let { descricao:d, preco:p, desconto = 5 } = produto;
+        // console.log(d, p, desconto);
+        
+        let {detalhes: {fabricante, modelo}} = produto;
+        console.log(fabricante, modelo);
+
+
+    
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+   
+
+</body>
+</html>

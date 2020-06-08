@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão'];
+
+        // Está criando variáveis que recebem o valor do posicionamento do array.
+        let [a, b, , c, d = 'Banana'] = frutas;
+        console.log(a, b, c, d);
+
+        let coisas = [ ['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria'] ];
+        let [, [,m]] = coisas;
+        let [[,,p,],] = coisas;
+        console.log(m);
+        console.log(p);
+
+    
+    </script>
+    
+    
+</head>
+<body>
+    <div id="output"></div>
+    
+   
+
+</body>
+</html>
